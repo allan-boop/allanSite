@@ -1,4 +1,78 @@
 @import "~bootstrap/scss/bootstrap";
 body {
-    background-color: lightgray;
+    background-color: $cyan-800;
+    overflow-x: hidden; /* masque la barre de défilement horizontale */
+}
+
+.entete {
+    display: flex; /* utilise Flexbox pour aligner les éléments */
+    justify-content: center; /* centre horizontalement le contenu */
+    align-items: center; /* centre verticalement le contenu */
+    position: relative;
+    background-color: #557C93;
+    width: 100vw;
+    height: 15vh;
+}
+
+
+.entete::after {
+    content: ''; /* Ajoute un contenu vide pour le pseudo-élément */
+    position: absolute; /* Permet de positionner le pseudo-élément */
+    bottom: -10px; /* Place le pseudo-élément en bas de la div */
+    left: 0; /* Place le pseudo-élément tout à gauche de la div */
+    width: 100%; /* Donne au pseudo-élément la même largeur que la div */
+    height: 6px; /* Hauteur du flou */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); /* Dégradé de transparence */
+    filter: blur(10px); /* Ajoute un flou gaussien au pseudo-élément */
+  }
+h1 {
+    font-size: 48px; /* Taille de police pour le titre */
+    font-weight: bold; /* Épaisseur de police en gras pour un titre plus imposant */
+    font-family: 'Playfair Display', serif; /* Police de caractères élégante pour le titre */
+    color: #3E3E3E; /* Couleur de police foncée pour un contraste suffisant */
+    text-align: center; /* Alignement central pour le titre */
+    text-transform: uppercase; /* Transformation du texte en majuscules pour un aspect plus sophistiqué */
+    letter-spacing: 1px; /* Espacement entre les lettres pour un effet plus aéré */  
+}
+
+.titre {
+    margin-top: 4vh;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.logo {
+    height: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.accordion {
+    --bs-accordion-bg: #557C93;
+    width: 70vw;
+    margin: 0 auto;
+}
+
+i {
+    margin-right: 0.5rem;
+}
+
+.list-group {
+    max-width: 50vw;
+    margin: 0 auto;
+}
+
+.list-group-item {
+    text-align: center; /* Alignement central pour le titre */
+}
+
+.card-title {
+    text-align: center; /* Alignement central pour le titre */
+}
+
+.coordonnees {
+    max-width: 30vw;
+    margin: 0 auto;
 }
